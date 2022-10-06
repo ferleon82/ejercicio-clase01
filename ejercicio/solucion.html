@@ -38,18 +38,32 @@
                 Equipo : +String nombre
                 Equipo : +String tipo_deporte
                 Equipo : +String siglas
+                Equipo : +getNombre()String 
+                Equipo : +setNombre(nombre String)
+                Equipo : +getTipoDeporte()TipoDeporte 
+                Equipo : +setTipoDeporte(tipo_deporte TipoDeporte)
+                Equipo : +getSiglas()String 
+                Equipo : +setSiglas(siglas Siglas)
                 Equipo : +jugar_torneo(amount)
                 Equipo : +entranar_jugadores(amount)
                 
                 class Jugador
                 Jugador : +String nombre
                 Jugador : +String apellido
+                Jugador : +getNombre()String
+                Jugador : +setNombre(nombre String) 
+                Jugador : +getApellido()Apellido
+                Jugador : +setApellido(apellido Apellido)
                 Jugador : +concentrarse(amount)
                 Jugador : +entrenar(amount)
 
                 class Sancion
                 Sancion : +String observacion
                 Sancion : +Double multa
+                Sancion : +getObservacion()String
+                Sancion : +setObservacion(observacion Observacion)
+                Sancion : +getMulta()String
+                Sancion : +setMulta(multa Multa)
                 Sancion : +tarjeta_amarilla(amount)
                 Sancion : +tarjeta_roja(amount)
                 
