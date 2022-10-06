@@ -1,0 +1,61 @@
+<html>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+
+        
+        <h5>Pasar el modelo PIM a un modelo PSM</h5>
+        <h5>Modelo PIM </h5> 
+        <div class="mermaid">
+            classDiagram
+            direction LR
+                class Equipo
+                Equipo : +nombres
+                Equipo : +tipo_deporte
+                Equipo : +siglas
+               
+                
+                class Jugador
+                Jugador : +nombre
+                Jugador : +apellido
+              
+
+                class Sancion
+                Sancion : +observacion
+                Sancion : +multa
+               
+                Equipo "1" --> "0..*" Jugador
+                Jugador "1" --> "0..*" Sancion
+
+        </div>
+        <h5>Modelo PSM </h5>
+        <div class="mermaid">
+            classDiagram
+                direction LR
+                class Equipo
+                Equipo : +String nombre
+                Equipo : +String tipo_deporte
+                Equipo : +String siglas
+                Equipo : +jugar_torneo(amount)
+                Equipo : +entranar_jugadores(amount)
+                
+                class Jugador
+                Jugador : +String nombre
+                Jugador : +String apellido
+                Jugador : +concentrarse(amount)
+                Jugador : +entrenar(amount)
+
+                class Sancion
+                Sancion : +String observacion
+                Sancion : +Double multa
+                Sancion : +tarjeta_amarilla(amount)
+                Sancion : +tarjeta_roja(amount)
+                
+                Equipo "1" --> "0..*" Jugador
+                Jugador "1" --> "0..*" Sancion
+
+        </div>
+    </body>
+</html>
